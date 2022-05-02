@@ -6,8 +6,6 @@ icon = pg.image.load('images/icon.png')
 clock = pg.time.Clock()
 window = pg.display.set_mode((S_WIDTH, S_HEIGHT))
 
-t = Tile(window, (20,40))
-
 def main():
     running = True
     while running:
