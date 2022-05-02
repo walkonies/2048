@@ -1,19 +1,18 @@
-from config import TILE_SIZE, COLORS
+from config import TILE_SIZE, COLORS, NUM_FONT, NUM_FONT_SIZE
 from random import randint
 import pygame as pg
 pg.font.init()
 
 class Tile():
-	font = pg.font.Font('freesansbold.ttf', 32)
+	font = pg.font.Font(NUM_FONT, NUM_FONT_SIZE)
 	size = TILE_SIZE
-	color = (100,100,100)
+	color = (COLORS['tile'])
 	def __init__(self, win, pos):
 		self.surface = win
 		self.pos = pos
 		self.num = 2
 		self.setRect()
 		self.setLabl()
-		print(self)
 
 	def setRect(self):
 		self.rect = pg.Rect((self.pos),(self.size, self.size))
