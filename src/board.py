@@ -12,14 +12,7 @@ class Board():
 	def __init__(self, win):
 		self.surface = win
 		self.board = self.newBoard()
-		self.populateBoard()
 		
-
-	def populateBoard(self):
-		for i in range(NUM_ROWS):
-			for j in range(NUM_COLS):
-				self.board[i][j] = Tile(self.surface, self.getPos(i,j), self.tile_size)
-
 	def newBoard(self):
 		return [[0 for _ in range(self.NUM_ROWS)] for _ in range(self.NUM_COLS)]
 
@@ -36,10 +29,9 @@ class Board():
 				rect = pg.Rect((startX+ j*self.tile_size, startY+ i*self.tile_size), (self.tile_size, self.tile_size))
 				pg.draw.rect(self.surface, COLORS['black'], rect, 2)
 
-
 	def draw(self):
-		for i, row in enumerate(self.board):
-			for j, tile in enumerate(row):
+		for row in self.board:
+			for tile in row:
 				if tile:
 					tile.draw()
 		self.drawGrid()

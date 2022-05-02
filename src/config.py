@@ -9,4 +9,4 @@ NUM_FONT = 'freesansbold.ttf'
 NUM_FONT_SIZE = 22
 BOARD_PAD = 20
 
-NUM_ROWS = NUM_COLS = 1
+NUM_ROWS = NUM_COLS = 4
