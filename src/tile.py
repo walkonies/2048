@@ -15,13 +15,6 @@ class Tile():
 		self.setLabl()
 		print(self)
 
-	def collide(self, tile):
-		if self.num == tile.num:
-			self.combine(tile)
-
-	def combine(self, tile):
-		self.num *= 2
-
 	def setRect(self):
 		self.rect = pg.Rect((self.pos),(self.size, self.size))
 
