@@ -9,3 +9,7 @@ TILE_SIZE = 150
 
 NUM_FONT = 'freesansbold.ttf'
 NUM_FONT_SIZE = 32
+TILE_GAP = 10
+BOARD_PAD = 20
+
+NUM_ROWS = NUM_COLS = 4
