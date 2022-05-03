@@ -7,10 +7,12 @@ class Tile():
 	font = pg.font.Font(NUM_FONT, NUM_FONT_SIZE)
 	
 	color = (COLORS['tile'])
-	def __init__(self, win, pos, size):
+	def __init__(self, win, pos, row, col, size):
 		self.surface = win
 		self.pos = pos
 		self.size = size
+		self.row = row
+		self.col = col
 		self.num = 2
 		self.setRect()
 		self.setLabl()
@@ -18,8 +20,10 @@ class Tile():
 	def setRect(self):
 		self.rect = pg.Rect((self.pos),(self.size, self.size))
 
-	def update(self, pos):
+	def update(self, pos, row, col):
 		self.pos = pos
+		self.row = row
+		self.col = col
 		self.setRect()
 		self.setLabl()
 

@@ -18,6 +18,8 @@ def main():
                 (mouseX, mouseY) = pg.mouse.get_pos()
             if event.type == pg.KEYDOWN:
                     key = event.key
+                    if key == pg.K_SPACE:
+                        board.move('down')
                     # handle key events
             if event.type == pg.QUIT:
                 running = False
